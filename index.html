@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LE MOMENT | OFFICIAL</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+    
+    <style>
+        /* 과제 목록 컨테이너 및 그리드 스타일 정의 */
+        .assignment-container {
+            max-width: 1100px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+        }
+
+        .assignment-card {
+            background-color: #ffffff;
+            border: 1px solid #E2D9F5;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(74, 53, 79, 0.05);
+        }
+
+        /* 💡 좁은 세로 리스트를 가로 격자 배열로 전환 */
+        .assignment-grid {
+            display: grid;
+            /* 화면 크기에 맞춰 자동으로 개수 조절 (최소 180px 너비) */
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 💡 각 과제 링크를 누르고 싶은 '버튼' 형태로 스타일링 */
+        .assignment-grid li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 48px;
+            padding: 10px 12px;
+            background-color: #fcfbfa;
+            color: #4A354F;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #E2D9F5;
+            border-radius: 8px;
+            transition: all 0.2s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        /* 💡 마우스를 올렸을 때 반전되는 인터랙티브 효과 */
+        .assignment-grid li a:hover {
+            background-color: #4A354F;
+            color: #ffffff;
+            border-color: #4A354F;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 53, 79, 0.15);
+        }
+    </style>
+</head>
+
+<body style="background-color: #f7f6f3; margin: 0; min-height: 100vh; display: flex; flex-direction: column;">
+
+    <header style="background-color: #4A354F; text-align: center; padding: 40px 20px; margin-bottom: 30px;">
+        <h1 style="font-family: 'Anton', sans-serif; font-size: 50px; letter-spacing: 3px; margin: 0;">
+            <a href="index.html" style="color: #ffffff; text-decoration: none;">LE MOMENT</a>
+        </h1>
+        <p style="color: #E2D9F5; font-weight: bold; margin-top: 10px; margin-bottom: 0;">YOU ARE NOT BULLISH ENOUGH!🚀🚀🚀</p>
+    </header>
+
+    <div style="flex: 1;">
+        <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+            <h2 style="color: #4A354F; font-size: 24px; margin-bottom: 10px;">반갑습니다, LE MOMENT 입니다.</h2>
+            <p style="color: #666666; font-size: 16px; margin: 0;">반갑습니다. MBC컴퓨터학원 수강생 여러분 다같이 끝까지 화이팅 합시다!</p>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 50px;">
+            <video src="intro.mp4" controls width="640" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); max-width: 100%;"></video>
+        </div>
+
+        <div class="assignment-container">
+            <div class="assignment-card">
+                <h3 style="text-align: center; color: #4A354F; margin-top: 0; margin-bottom: 25px; font-size: 20px; border-bottom: 2px solid #4A354F; padding-bottom: 12px; dashed;">📋 HTML 과제 목록</h3>
+
+                <ul class="assignment-grid">
+                    <li><a href="qr.png" target="_blank">큐알코드 클릭</a></li>
+                    <li><a href="01/ex1-3.html">엔티티코드</a></li>
+                    <li><a href="01/ex1-4.html">제목표시</a></li>
+                    <li><a href="01/ex1-5.html">문단태그</a></li>
+                    <li><a href="01/ex1-8.html">새창열림</a></li>
+                    <li><a href="01/ex1-9.html">이미지태그</a></li>
+                    <li><a href="01/ex1-10.html">경로</a></li>
+                    <li><a href="01/ex1-11.html">목록요소</a></li>
+                    <li><a href="01/ex1-12.html">2차메뉴</a></li>
+                    <li><a href="01/ex-1-35.html">작은div</a></li>
+                    <li><a href="01/ex1-34.html">div</a></li>
+                    <li><a href="01/ex1-37.html">독립적인 기사, 게시물</a></li>
+                    <li><a href="01/ex1-38.html">비디오삽입</a></li>
+                    <li><a href="01/ex-1-39.html">오디오삽입</a></li>
+                    <li><a href="01/ex-1-40.html">iframe넣기</a></li>
+                    <li><a href="01/ex-1-41.html">표만들기</a></li>
+                    <li><a href="01/ex1-42.html">표만들기2</a></li>
+                    <li><a href="01/ex1-43.html">셀병합하기</a></li>
+                    <li><a href="01/ex1-44.html">셀병합퀴즈</a></li>
+                    <li><a href="../02/ex2-1.html">cssfmf 적용하는 방법</a></li>
+                    <li><a href="../02/ex2-5.html">태그선택자</a></li>
+                    <li><a href="../02/ex2-6.html">ID선택자</a></li>
+                    <li><a href="../02/ex2-7.html">건강에좋은차컬러</a></li>
+                    <li><a href="../02/ex2-8.html">전체선택자</a></li>
+                    <li><a href="../02/ex2-9.html">여행지</a></li>
+                    <li><a href="../02/ex2-10.html">자식선택자</a></li>
+                    <li><a href="../02/ex2-11.html">인접선택자</a></li>
+                    <li><a href="../02/ex2-12.html">형제선택자</a></li>
+                    <li><a href="../02/ex2-13.html">그룹선택자</a></li>
+                    <li><a href="../02/ex2-14.html">속성선택자</a></li>
+                    <li><a href="../02/ex2-15.html">제목모름</a></li>
+                    <li><a href="../02/ex2-16.html">동적 관련 가상 클래스 선택자</a></li>
+                    <li><a href="../02/ex2-17.html">Pseudo</a></li>
+                    <li><a href="../02/ex2-18.html">unit</a></li>
+                    <li><a href="../02/ex2-19.html">제목없음</a></li>
+                    <li><a href="../02/ex2-20.html">font-family</a></li>
+                    <li><a href="../02/ex2-21.html">제목없음</a></li>
+                    <li><a href="../02/ex-2-22.html">글꼴컬러넣기</a></li>
+                    <li><a href="../figma3.html">커피</a></li>
+                    <li><a href="../02/ex-2-22.html">webfont</a></li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #4A354F; text-align: center; padding: 25px 20px; margin-top: auto;">
+        <p style="margin: 0; color: #ffffff !important; font-size: 14px; letter-spacing: 0.5px;">© 2026 Kim Ji-dae. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
