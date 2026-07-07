@@ -1,0 +1,140 @@
+/* iOS-style Action Sheet CSS */
+:root {
+    --ios-blue: #007AFF;
+    --ios-red: #FF3B30;
+    --ios-bg: rgba(255, 255, 255, 0.82);
+    --ios-divider: rgba(60, 60, 67, 0.15);
+    --ios-secondary-text: #8E8E93;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f2f2f7;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.trigger-btn {
+    padding: 12px 24px;
+    font-size: 17px;
+    color: white;
+    background-color: var(--ios-blue);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Action Sheet */
+.action-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    z-index: 1001;
+    padding: 8px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+}
+
+.action-sheet.active {
+    transform: translate(-50%, 0);
+}
+
+.sheet-group {
+    background: var(--ios-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.sheet-header {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 0.5px solid var(--ios-divider);
+}
+
+.sheet-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ios-secondary-text);
+    margin-bottom: 2px;
+}
+
+.sheet-description {
+    font-size: 13px;
+    color: var(--ios-secondary-text);
+}
+
+.sheet-item {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 20px;
+    color: var(--ios-blue);
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid var(--ios-divider);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.sheet-item:last-child {
+    border-bottom: none;
+}
+
+.sheet-item:active {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.sheet-item.destructive {
+    color: var(--ios-red);
+}
+
+.sheet-item.cancel {
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.cancel-group {
+    margin-bottom: 0;
+}

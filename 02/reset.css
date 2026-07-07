@@ -1,0 +1,7 @@
+@import "UTF-8";
+@import url(./reset.css);
+body{
+    background: url(../02/imgs/bg.jpg);
+p{
+    background: rgba(255,0,0,0.5);
+}

@@ -1,0 +1,78 @@
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 400px; /* 피그마 디자인 너비 기준으로 설정 (텍스트 영역 너비 340px + 여백) */
+    height: 800px; /* 피그마 디자인 높이 기준으로 설정 */
+    background: linear-gradient(90deg, 
+        rgb(255, 215, 0) 0%, 
+        rgb(50, 205, 50) 25%, 
+        rgb(211, 211, 211) 50%, 
+        rgb(147, 112, 219) 75%, 
+        rgb(255, 105, 180) 100%
+    );
+    overflow: hidden;
+    margin: 0 auto; /* 중앙 정렬 (선택 사항) */
+}
+
+/* 이미지 레이어 */
+.image-wrapper {
+    position: absolute;
+    left: 63px;
+    top: 299px;
+    width: 277px;
+    height: 277px;
+}
+
+.main-img, .effect-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 텍스트 스타일 */
+.title {
+    position: absolute;
+    left: 35px;
+    top: 610px;
+    font-family: 'HYGungSo-Bold', 'Gungsuh', serif;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.content-link {
+    position: absolute;
+    left: 38px;
+    top: 640px;
+    width: 340px;
+    height: 210px;
+    font-family: 'HYGungSo-Bold', 'Gungsuh', serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* 대략적인 줄 수 제한 */
+    -webkit-box-orient: vertical;
+}
+
+.content-link:hover {
+    text-decoration: underline;
+}

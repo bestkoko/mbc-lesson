@@ -1,0 +1,37 @@
+.br1 {
+    width: 150px;
+    border: 5px solid green;
+    margin: auto;
+}
+
+hr,
+ul {
+    margin: block start 0em;
+    margin-inline-end: 0em;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+
+}
+
+.br1:nth-child(2) {
+    border-color: rgb(248, 5, 195);
+    margin-top: 50px;
+
+}
+
+a:hover {
+    color: blue;
+}
+
+img {
+    padding-top: 20px;
+    padding-left: 20px;
+}

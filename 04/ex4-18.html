@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>적정 몸무게</title>
+</head>
+<body>
+    <script>
+        let user_height = prompt('당신의 신장은?', '0');
+        let user_weight = prompt('당신의 체중은?', '0');
+
+        // 숫자로 변환 (가장 중요!)
+        user_height = parseFloat(user_height);
+        user_weight = parseFloat(user_weight);
+
+        let normal_weight = (user_height - 100) * 0.9;
+
+        let result = user_weight > normal_weight 
+                     ? '적정 몸무게 이상' 
+                     : '적정 몸무게 미달';
+
+        document.write(result);
+    </script>
+</body>
+</html>

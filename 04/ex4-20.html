@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" method="post">
+        <lebel for="age">나이:</lebel>
+        <input type="text" id="age" name="age" />
+        <button type="submit">전송</button>
+    </form>
+    <hr>
+    <div class="result"></div>
+        <script>
+            let form=document.querySelector('form'),
+             age=document.querySelector('#age'),
+             result = document.querySelector('.result');
+            
+            form.addEventListener('submit',function (e) {
+                e.preventDefault();
+               let n = Number(age.value)
+               
+            
+                if (n < 20) {//0~19
+                    result.innerHTML +="비통과 <br>" 
+                }
+                else if (n < 30 ) {//20~29
+                    reselt. innerHTML+= "통과 <br>"
+                }
+                else { //위 조건에 해당되지 않는 나머지수
+                    reselt. innerHTML += "비통과"
+                }
+
+
+            })
+        </script>
+  </body>
+</html>

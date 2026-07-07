@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import ulr("./fonts.css")
+p{
+   border: 1px; solid #000;
+}
+/* inline과 inline-block이 섞여있을때 수직 기준선 맞춤 */
+.valign img{
+    vertical-align: middle;
+    vertical-align: top;
+    vertical-align: text-top;
+
+}

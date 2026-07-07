@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 기본 구조 쉽게 이해하기 - 초등학생용</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', '맑은 고딕', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #764ba2;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #e0e0e0;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .emoji-title {
+            font-size: 1.3em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 1.05em;
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9ff;
+        }
+
+        tr:hover {
+            background: #e8ecff;
+        }
+
+        pre {
+            background: #1e1e2e;
+            color: #cdd6f4;
+            padding: 20px;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        .code-keyword { color: #f38ba8; }
+        .code-tag { color: #89b4fa; }
+        .code-attr { color: #fab387; }
+        .code-value { color: #a6e3a1; }
+        .code-comment { color: #6c7086; font-style: italic; }
+        .code-text { color: #cdd6f4; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-left: 5px solid #ff9800;
+            padding: 18px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 15px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+        }
+
+        .tree {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'Consolas', monospace;
+            font-size: 1em;
+            line-height: 2;
+            margin: 15px 0;
+        }
+
+        .tree-line {
+            padding-left: 0;
+        }
+
+        .tree-indent-1 { padding-left: 20px; }
+        .tree-indent-2 { padding-left: 40px; }
+        .tree-indent-3 { padding-left: 60px; }
+
+        .practice-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border: 2px dashed #4caf50;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .practice-box h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        .number-badge {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .tag-example {
+            background: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+            color: #1565c0;
+        }
+
+        footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 20px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 제목 카드 -->
+        <div class="card">
+            <h1>🌐 HTML 기본 구조 쉽게 이해하기</h1>
+            <p class="subtitle">초등학생도 쉽게 배우는 웹사이트 만들기!</p>
+        </div>
+
+        <!-- HTML이 뭔가요? -->
+        <div class="card">
+            <h2>📌 HTML이 뭐예요?</h2>
+            <p><strong>HTML</strong>은 웹사이트의 <strong>뼈대</strong>예요.</p>
+            <p>레고 블록으로 집을 짓듯이, HTML로 웹사이트의 구조를 만드는 거죠.</p>
+        </div>
+
+        <!-- 도시락 상자 비유 -->
+        <div class="card">
+            <h2>🍱 HTML 문서 = 도시락 상자</h2>
+            <p>HTML 문서를 <strong>도시락 상자</strong>라고 생각해봐요.</p>
+            <table>
+                <tr>
+                    <th>도시락 상자</th>
+                    <th>HTML 문서</th>
+                </tr>
+                <tr>
+                    <td>상자 겉면에 붙은 이름표</td>
+                    <td><span class="tag-example">&lt;head&gt;</span> (눈에 안 보이는 정보)</td>
+                </tr>
+                <tr>
+                    <td>실제로 먹는 음식들</td>
+                    <td><span class="tag-example">&lt;body&gt;</span> (화면에 보이는 내용)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 기본 구조 -->
+        <div class="card">
+            <h2>🏗️ 기본 구조 살펴보기</h2>
+            <pre><code><span class="code-comment">&lt;!-- "이건 HTML5 문서예요!" 라고 알려주는 표시 --&gt;</span>
+<span class="code-keyword">&lt;!DOCTYPE html&gt;</span>
+<span class="code-tag">&lt;html&gt;</span>                 <span class="code-comment">&lt;!-- HTML 문서의 시작! --&gt;</span>
+
+  <span class="code-tag">&lt;head&gt;</span>               <span class="code-comment">&lt;!-- 머리 부분: 눈에 안 보이는 정보들 --&gt;</span>
+    <span class="code-tag">&lt;title&gt;</span><span class="code-text">내 첫 웹사이트</span><span class="code-tag">&lt;/title&gt;</span>  <span class="code-comment">&lt;!-- 브라우저 탭에 보이는 제목 --&gt;</span>
+  <span class="code-tag">&lt;/head&gt;</span>
+
+  <span class="code-tag">&lt;body&gt;</span>               <span class="code-comment">&lt;!-- 몸통 부분: 화면에 실제로 보이는 것들 --&gt;</span>
+    <span class="code-tag">&lt;h1&gt;</span><span class="code-text">안녕하세요!</span><span class="code-tag">&lt;/h1&gt;</span>           <span class="code-comment">&lt;!-- 큰 제목 --&gt;</span>
+    <span class="code-tag">&lt;p&gt;</span><span class="code-text">나는 HTML을 배우는 중이에요.</span><span class="code-tag">&lt;/p&gt;</span>  <span class="code-comment">&lt;!-- 문단 (글 내용) --&gt;</span>
+  <span class="code-tag">&lt;/body&gt;</span>
+
+<span class="code-tag">&lt;/html&gt;</span>                <span class="code-comment">&lt;!-- HTML 문서의 끝! --&gt;</span></code></pre>
+        </div>
+
+        <!-- 각 부분 쉽게 이해하기 -->
+        <div class="card">
+            <h2>🔍 각 부분 쉽게 이해하기</h2>
+
+            <h3><span class="number-badge">1</span> <span class="code-tag">&lt;!DOCTYPE html&gt;</span></h3>
+            <p>"이 문서는 <strong>최신 HTML</strong>이에요!" 라고 컴퓨터에게 알려주는 거예요.</p>
+            <p>(옛날에는 복잡했는데, 지금은 이 한 줄이면 돼요!)</p>
+
+            <h3><span class="number-badge">2</span> <span class="code-tag">&lt;html&gt; ... &lt;/html&gt;</span></h3>
+            <p><strong>전체 문서를 감싸는 가장 큰 상자</strong>예요.</p>
+            <p>시작 태그 <span class="tag-example">&lt;html&gt;</span>과 끝 태그 <span class="tag-example">&lt;/html&gt;</span> 사이에 모든 내용을 넣어요.</p>
+
+            <h3><span class="number-badge">3</span> <span class="code-tag">&lt;head&gt; ... &lt;/head&gt;</span></h3>
+            <p><strong>눈에 안 보이는 정보</strong>를 넣는 곳이에요.</p>
+            <ul style="margin-left: 20px; font-size: 1.05em; line-height: 2;">
+                <li>웹사이트 제목 (<span class="tag-example">&lt;title&gt;</span>)</li>
+                <li>글꼴 정보</li>
+                <li>검색 엔진용 설명</li>
+            </ul>
+            <p>도시락 상자 뚜껑 안쪽에 붙은 메모 같은 거예요!</p>
+
+            <h3><span class="number-badge">4</span> <span class="code-tag">&lt;body&gt; ... &lt;/body&gt;</span></h3>
+            <p><strong>화면에 실제로 보이는 모든 것</strong>을 넣는 곳이에요!</p>
+            <ul style="margin-left: 20px; font-size: 1.05em; line-height: 2;">
+                <li>글자</li>
+                <li>사진</li>
+                <li>버튼</li>
+                <li>동영상</li>
+            </ul>
+            <p>도시락 안의 실제 음식들이죠! 🍱</p>
+        </div>
+
+        <!-- 태그 설명 -->
+        <div class="card">
+            <h2>🏷️ 태그(Tag)가 뭔가요?</h2>
+            <p>HTML은 <strong>태그</strong>라는 걸로 내용을 감싸요.</p>
+            <pre><code><span class="code-tag">&lt;태그이름&gt;</span>  내용  <span class="code-tag">&lt;/태그이름&gt;</span>
+  <span class="code-keyword">↑</span>시작              <span class="code-keyword">↑</span>끝</code></pre>
+            <p>예시:</p>
+            <ul style="margin-left: 20px; font-size: 1.05em; line-height: 2;">
+                <li><span class="tag-example">&lt;h1&gt;</span> ~ <span class="tag-example">&lt;/h1&gt;</span> : 큰 제목 (heading 1)</li>
+                <li><span class="tag-example">&lt;p&gt;</span> ~ <span class="tag-example">&lt;/p&gt;</span> : 문단 (paragraph)</li>
+            </ul>
+            <div class="highlight-box">
+                <p>💡 <strong>꼭 기억하세요!</strong> 시작 태그가 있으면 <strong>끝 태그</strong>가 필요해요!<br>
+                (예외도 있지만 처음에는 다 닫아주는 게 좋아요)</p>
+            </div>
+        </div>
+
+        <!-- 전체 구조 트리 -->
+        <div class="card">
+            <h2>🌳 한눈에 보는 전체 구조</h2>
+            <div class="tree">
+                <div class="tree-line">📄 HTML 문서</div>
+                <div class="tree-indent-1">│</div>
+                <div class="tree-indent-1">├── 🏷️ &lt;!DOCTYPE html&gt;    ← "이건 HTML5 문서입니다"</div>
+                <div class="tree-indent-1">│</div>
+                <div class="tree-indent-1">└── 📦 &lt;html&gt;</div>
+                <div class="tree-indent-2">│</div>
+                <div class="tree-indent-2">├── 🧠 &lt;head&gt;           ← 머리 (눈에 안 보임)</div>
+                <div class="tree-indent-3">│   └── &lt;title&gt;제목&lt;/title&gt;</div>
+                <div class="tree-indent-2">│</div>
+                <div class="tree-indent-2">└── 🎨 &lt;body&gt;           ← 몸통 (화면에 보임!)</div>
+                <div class="tree-indent-3">├── &lt;h1&gt;제목&lt;/h1&gt;</div>
+                <div class="tree-indent-3">├── &lt;p&gt;글 내용&lt;/p&gt;</div>
+                <div class="tree-indent-3">└── &lt;img&gt;사진&lt;/img&gt;</div>
+            </div>
+        </div>
+
+        <!-- 연습해보기 -->
+        <div class="card">
+            <div class="practice-box">
+                <h3>🎯 연습해보기!</h3>
+                <p>아래 코드를 복사해서 <strong>.html</strong> 파일로 저장하고,<br>
+                브라우저(크롬, 엣지 등)로 열면 웹사이트가 나타나요!</p>
+            </div>
+            <pre><code><span class="code-keyword">&lt;!DOCTYPE html&gt;</span>
+<span class="code-tag">&lt;html&gt;</span>
+  <span class="code-tag">&lt;head&gt;</span>
+    <span class="code-tag">&lt;title&gt;</span><span class="code-text">나의 첫 홈페이지</span><span class="code-tag">&lt;/title&gt;</span>
+  <span class="code-tag">&lt;/head&gt;</span>
+  <span class="code-tag">&lt;body&gt;</span>
+    <span class="code-tag">&lt;h1&gt;</span><span class="code-text">🎉 환영합니다!</span><span class="code-tag">&lt;/h1&gt;</span>
+    <span class="code-tag">&lt;p&gt;</span><span class="code-text">나는 초등학생이고, HTML을 배우고 있어요.</span><span class="code-tag">&lt;/p&gt;</span>
+    <span class="code-tag">&lt;p&gt;</span><span class="code-text">앞으로 멋진 웹사이트를 만들 거예요!</span><span class="code-tag">&lt;/p&gt;</span>
+  <span class="code-tag">&lt;/body&gt;</span>
+<span class="code-tag">&lt;/html&gt;</span></code></pre>
+        </div>
+
+        <!-- 마무리 -->
+        <div class="card">
+            <h2>🎓 마무리</h2>
+            <p>혹시 이 중에서 더 궁금한 부분이 있어요?</p>
+            <p>예를 들어 <strong>"사진은 어떻게 넣어요?"</strong>나 <strong>"제목 크기는 어떻게 달라요?"</strong> 같은 것도 물어봐도 돼요! 😊</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 HTML 초등학생 가이드 | 쉽게 배우는 웹 개발 🚀</p>
+    </footer>
+</body>
+</html>

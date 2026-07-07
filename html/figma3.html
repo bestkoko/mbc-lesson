@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFEIN Banner Recreated</title>
+    <style>
+        /* Pretendard 폰트 사용 (한글 가독성 우수) */
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+
+        .banner {
+            display: flex;
+            width: 1200px;
+            height: 400px;
+            border: 2px solid #000;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        /* 좌우 이미지 영역 (원본 이미지의 특정 부분을 배경으로 활용) */
+        .side-image {
+            flex: 0 0 25%;
+            background-image: url('02/imgs/caffe.png');
+            background-size: cover;
+        }
+
+        .side-image.left {
+            background-position: 0% center;
+            border-right: 2px solid #000;
+        }
+
+        .side-image.right {
+            background-position: 100% center;
+            border-left: 2px solid #000;
+        }
+
+        /* 중앙 콘텐츠 영역 */
+        .center-content {
+            flex: 1;
+            background-color: #A3734D; /* 원본의 갈색과 유사한 색상 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 중앙 텍스트 부분 */
+        .text-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #000;
+            padding: 20px;
+        }
+
+        .text-area h1 {
+            font-size: 110px;
+            font-weight: 900;
+            line-height: 0.85;
+            letter-spacing: -6px;
+            margin-bottom: 10px;
+            /* 원본의 두꺼운 느낌을 위해 폰트 굵기 강조 */
+        }
+
+        .text-area p {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        /* 하단 검은색 바 */
+        .bottom-bar {
+            height: 100px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        /* 반응형 대응 (필요시) */
+        @media (max-width: 1200px) {
+            .banner {
+                width: 95%;
+                height: auto;
+                aspect-ratio: 3 / 1;
+            }
+            .text-area h1 { font-size: 8vw; }
+            .text-area p { font-size: 3.5vw; }
+            .bottom-bar { font-size: 3vw; height: 25%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <!-- 왼쪽 카페 내부 이미지 -->
+        <div class="side-image left"></div>
+
+        <!-- 중앙 텍스트 및 정보 -->
+        <div class="center-content">
+            <div class="text-area">
+                <h1>CAFEIN</h1>
+                <p>듀크 스트리트의 진정한<br>커피</p>
+            </div>
+            <div class="bottom-bar">
+                오픈기념 : 아아 1000원
+            </div>
+        </div>
+
+        <!-- 오른쪽 커피 잔 이미지 -->
+        <div class="side-image right"></div>
+    </div>
+
+</body>
+</html>

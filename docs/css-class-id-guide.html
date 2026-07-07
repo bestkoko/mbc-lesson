@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 CSS 클래스(class)와 아이디(id) 완벽 정복!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 8px solid;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .class-card {
+            border-left-color: #4facfe;
+            background: #f0f9ff;
+        }
+
+        .id-card {
+            border-left-color: #f093fb;
+            background: #fff5ff;
+        }
+
+        .vs-card {
+            border-left-color: #ff9a9e;
+            background: #fff5f5;
+        }
+
+        .title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .class-card .title { color: #0076ad; }
+        .id-card .title { color: #b621fe; }
+        .vs-card .title { color: #ff4e50; }
+
+        .explanation {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: #2d3436;
+            color: #fab1a0;
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-top: 15px;
+        }
+
+        .code-comment { color: #636e72; }
+        .code-tag { color: #ff7675; }
+        .code-attr { color: #ffeaa7; }
+        .code-val { color: #55efc4; }
+        .code-selector { color: #74b9ff; }
+
+        .analogy {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px dashed #ddd;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .analogy-icon {
+            font-size: 2.5em;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .summary-box h2 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .summary-list {
+            list-style: none;
+        }
+
+        .summary-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .summary-list li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.6em; }
+            .content { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 class와 id, 무엇이 다를까요?</h1>
+            <p>초등학생도 5분 만에 이해하는 CSS 단짝 친구들!</p>
+        </div>
+
+        <div class="content">
+            <!-- Class 설명 -->
+            <div class="card class-card">
+                <div class="title">
+                    <span>👕</span>
+                    <span>Class (클래스): 우리 반 유니폼!</span>
+                </div>
+                <div class="explanation">
+                    <p>클래스는 <strong>여러 명(태그)이 함께 입을 수 있는 옷</strong>과 같아요. </p>
+                    <p>축구팀 친구들이 모두 같은 유니폼을 입는 것처럼, 여러 태그에 똑같은 스타일을 주고 싶을 때 사용해요.</p>
+                </div>
+                <div class="analogy">
+                    <span class="analogy-icon">⚽</span>
+                    <p>"우리 팀은 모두 파란색 유니폼(class='blue-team')을 입자!"</p>
+                </div>
+                <div class="example-box">
+                    <span class="code-selector">.blue-team</span> { <span class="code-attr">color</span>: <span class="code-val">blue</span>; }<br><br>
+                    <span class="code-tag">&lt;p</span> <span class="code-attr">class</span>=<span class="code-val">"blue-team"</span><span class="code-tag">&gt;</span>철수<span class="code-tag">&lt;/p&gt;</span><br>
+                    <span class="code-tag">&lt;p</span> <span class="code-attr">class</span>=<span class="code-val">"blue-team"</span><span class="code-tag">&gt;</span>영희<span class="code-tag">&lt;/p&gt;</span> <span class="code-comment">&lt;-- 여러 명 가능!</span>
+                </div>
+            </div>
+
+            <!-- ID 설명 -->
+            <div class="card id-card">
+                <div class="title">
+                    <span>🆔</span>
+                    <span>ID (아이디): 나만의 이름표!</span>
+                </div>
+                <div class="explanation">
+                    <p>아이디는 <strong>오직 한 명(태그)만 가질 수 있는 특별한 이름</strong>이에요.</p>
+                    <p>우리 학교에 학생은 많지만, '3학년 1반 5번'은 딱 한 명뿐인 것과 같아요. 딱 하나만 있는 특별한 부분에 사용해요.</p>
+                </div>
+                <div class="analogy">
+                    <span class="analogy-icon">👑</span>
+                    <p>"왕관(id='king')은 오직 한 사람만 쓸 수 있어!"</p>
+                </div>
+                <div class="example-box">
+                    <span class="code-selector">#king</span> { <span class="code-attr">font-size</span>: <span class="code-val">30px</span>; }<br><br>
+                    <span class="code-tag">&lt;h1</span> <span class="code-attr">id</span>=<span class="code-val">"king"</span><span class="code-tag">&gt;</span>나는 왕이다<span class="code-tag">&lt;/h1&gt;</span> <span class="code-comment">&lt;-- 딱 한 번만 사용!</span>
+                </div>
+            </div>
+
+            <!-- 차이점 비교 -->
+            <div class="card vs-card">
+                <div class="title">
+                    <span>⚔️</span>
+                    <span>한 눈에 비교하기</span>
+                </div>
+                <div class="explanation">
+                    <p>1. <strong>기호가 달라요!</strong> 클래스는 점(.), 아이디는 샵(#)으로 시작해요.</p>
+                    <p>2. <strong>개수가 달라요!</strong> 클래스는 여러 번, 아이디는 딱 한 번만 써야 해요.</p>
+                    <p>3. <strong>힘이 달라요!</strong> 아이디는 클래스보다 힘이 더 세서, 둘이 싸우면 아이디가 이겨요!</p>
+                </div>
+            </div>
+
+            <!-- 요약 -->
+            <div class="summary-box">
+                <h2>🎯 이것만 기억하세요!</h2>
+                <ul class="summary-list">
+                    <li><strong>Class</strong>: 여러 번 쓸 수 있는 <strong>단체복</strong> (마침표 <code>.</code> 사용)</li>
+                    <li><strong>ID</strong>: 딱 한 번만 쓰는 <strong>이름표</strong> (해시 <code>#</code> 사용)</li>
+                    <li>한 명의 친구가 <strong>여러 벌의 옷(class)</strong>을 껴입을 수도 있어요!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

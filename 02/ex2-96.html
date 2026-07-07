@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .item {
+     width: 200px; height: 100px; background: url(../02/imgs/img/bg_fixed.png) ; color: white; text-align: center; line-height: 100px; cursor: pointer; transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: linear(0, -0.008 11%, -0.025 14.6%, -0.054 17.9%, -0.152 24.1%, -0.408 35%, -0.439 37.5%, -0.436 39.6%, -0.405 41.3%, -0.35 42.8%, -0.156 45.6%, 0.153 48.1%, 1.05 53.4%, 1.284 56%, 1.413 59%, 1.441 61.5%, 1.418 64.4%, 1.146 76.2%, 1.047 82.7%, 1.023 85.8%, 1.008 89.3%, 1);
+    }
+
+     .item:hover{
+        transform: scale(1.2); 
+     }
+     .item:hover+.drop{
+        display: block;
+        opacity: 1;
+     }
+     .drop{
+        width:100px;
+        height: 100px;
+        background: url(../02/imgs/img/bg_flower.png);
+        /* display: none; */
+        opacity: 0;
+        transition-property: display;
+        transition-duration: 1s;
+     }
+</style>
+</head>
+<body>
+    <div class="container">
+  <div class="item">Hover Me</div>
+  <div class="drop"></div>
+</div>
+</body>
+</html>

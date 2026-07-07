@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div</title>
+    <!-- 웹표준 html5, css3, es6 -->
+    <style>
+        .wrap{
+            width: 300px;
+            margin: auto;
+            background-color: antiquewhite;
+        }
+      footer,
+      section,
+      header {
+      
+        border: 1px solid;
+      }
+    </style>
+    <!-- 
+    ❌ [틀린 부분 1] </head> 태그가 누락되었습니다.
+    <style>이 끝났으므로 아래와 같이 head를 닫아주어야 합니다.
+  --></head>
+
+  <body>
+    <!-- header+section+footer -->
+    <!-- .,# -->
+    <div class="wrap">
+      <header>헤더</header>
+      <section>
+        <h2>semantic 태그</h2>
+        섹션
+      </section>
+      <footer>푸터</footer>
+      <!-- 
+      ❌ [틀린 부분 2] <div class="wrap">을 닫아주는 </div> 태그가 누락되었습니다.
+      여기서 div를 닫아주지 않으면 footer 아래 구조가 꼬일 수 있습니다.
+    --></div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+@import url(./retet.css);
+
+p {
+    background: rgba(0, 100, 200, .3);
+    width: 600px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 300px;
+    /* 마진 겹친현상:상하방향일때만 */
+}
+
+/* 인접한 요소의 상하 마진은 큰값으로 병합됨 */
+
+.art2 {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+
+}
+/* p 태그 중 1번째와 3번째만 선택하여 중앙 정렬 */
+ p:nth-of-type(3) {
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini CLI Slash Commands Reference</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        h1 { margin: 0; }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        code {
+            background-color: #e8f0fe;
+            color: #1a73e8;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-weight: bold;
+        }
+        .category-desc {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gemini CLI Slash Commands</h1>
+        <p>Gemini CLI에서 사용할 수 있는 주요 명령어 가이드</p>
+    </header>
+
+    <div class="container">
+        <h2>1. 세션 및 시스템 관리</h2>
+        <p class="category-desc">CLI의 일반적인 정보 확인 및 종료를 위한 명령어입니다.</p>
+        <table>
+            <tr><th>명령어</th><th>설명</th></tr>
+            <tr><td><code>/about</code></td><td>CLI의 버전 정보를 표시합니다.</td></tr>
+            <tr><td><code>/help</code> (또는 <code>/?</code>)</td><td>사용 가능한 명령어 목록과 도움말을 표시합니다.</td></tr>
+            <tr><td><code>/settings</code></td><td>설정 편집기를 열어 설정을 수정합니다.</td></tr>
+            <tr><td><code>/stats</code></td><td>현재 세션의 상세 통계(시간, 토큰 등)를 표시합니다.</td></tr>
+            <tr><td><code>/quit</code> (또는 <code>/exit</code>)</td><td>CLI를 종료합니다.</td></tr>
+            <tr><td><code>/clear</code></td><td>터미널 화면과 세션 기록을 지웁니다.</td></tr>
+        </table>
+
+        <h2>2. 대화 기록 및 세션 제어</h2>
+        <p class="category-desc">이전 대화로 돌아가거나 맥락을 관리합니다.</p>
+        <table>
+            <tr><th>명령어</th><th>설명</th></tr>
+            <tr><td><code>/resume</code></td><td>이전 세션을 탐색하여 재개하거나 체크포인트를 관리합니다.</td></tr>
+            <tr><td><code>/rewind</code></td><td>대화 기록을 뒤로 탐색하여 이전 상태로 되돌립니다.</td></tr>
+            <tr><td><code>/restore</code></td><td>도구 실행 직전의 상태로 프로젝트 파일을 복구합니다.</td></tr>
+            <tr><td><code>/compress</code></td><td>현재 대화 맥락을 요약하여 토큰을 절약합니다.</td></tr>
+            <tr><td><code>/copy</code></td><td>마지막 출력을 클립보드에 복사합니다.</td></tr>
+        </table>
+
+        <h2>3. 모델 및 지능형 에이전트 관리</h2>
+        <p class="category-desc">사용할 AI 모델과 서브에이전트 설정을 관리합니다.</p>
+        <table>
+            <tr><th>명령어</th><th>설명</th></tr>
+            <tr><td><code>/model</code></td><td>사용할 모델을 설정하거나 구성을 관리합니다.</td></tr>
+            <tr><td><code>/agents</code></td><td>서브에이전트 목록을 관리하고 활성화/비활성화합니다.</td></tr>
+            <tr><td><code>/skills</code></td><td>에이전트 스킬(전문 워크플로우)을 관리합니다.</td></tr>
+            <tr><td><code>/mcp</code></td><td>MCP 서버와 도구를 관리하고 인증합니다.</td></tr>
+        </table>
+
+        <h2>4. 작업 공간 및 컨텍스트 관리</h2>
+        <p class="category-desc">프로젝트 구조와 AI가 참조할 메모리를 관리합니다.</p>
+        <table>
+            <tr><th>명령어</th><th>설명</th></tr>
+            <tr><td><code>/directory</code></td><td>작업 공간에 디렉토리를 추가하거나 확인합니다.</td></tr>
+            <tr><td><code>/memory</code></td><td>AI의 계층적 메모리를 확인하거나 새로고침합니다.</td></tr>
+            <tr><td><code>/init</code></td><td>프로젝트 전용 지침 파일(GEMINI.md) 생성을 도와줍니다.</td></tr>
+            <tr><td><code>/tools</code></td><td>사용 가능한 도구 목록과 상세 설명을 표시합니다.</td></tr>
+        </table>
+
+        <h2>5. 기타 유틸리티</h2>
+        <p class="category-desc">다양한 편의 기능을 제공합니다.</p>
+        <table>
+            <tr><th>명령어</th><th>설명</th></tr>
+            <tr><td><code>/plan</code></td><td>계획 모드(Plan Mode)에서 생성된 계획을 확인합니다.</td></tr>
+            <tr><td><code>/theme</code></td><td>CLI의 시각적 테마를 변경합니다.</td></tr>
+            <tr><td><code>/bug</code></td><td>버그 리포트를 작성합니다.</td></tr>
+            <tr><td><code>/docs</code></td><td>공식 문서를 브라우저에서 엽니다.</td></tr>
+            <tr><td><code>/vim</code></td><td>입력창의 Vim 모드를 토글합니다.</td></tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>Gemini CLI Documentation &copy; 2026</p>
+    </footer>
+</body>
+</html>

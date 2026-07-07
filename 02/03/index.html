@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Action Sheet - 당근 영상 생성</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="openSheet" class="trigger-btn">액션 시트 열기</button>
+    </div>
+
+    <!-- Action Sheet Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Action Sheet Container -->
+    <div id="actionSheet" class="action-sheet">
+        <div class="sheet-group main-group">
+            <div class="sheet-header">
+                <h1 class="sheet-title">A Short Title Is Best</h1>
+                <p class="sheet-description">A description should be a short, complete sentence.</p>
+            </div>
+            
+            <button class="sheet-item destructive">Action 1</button>
+            <button class="sheet-item">Action 2</button>
+            <button class="sheet-item">Action 3</button>
+            <button class="sheet-item">Action 4</button>
+            <button class="sheet-item">Action 5</button>
+            <button class="sheet-item">Action 6</button>
+            <button class="sheet-item">Action 7</button>
+        </div>
+
+        <div class="sheet-group cancel-group">
+            <button id="closeSheet" class="sheet-item cancel">취소</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

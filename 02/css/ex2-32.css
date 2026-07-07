@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import ulr("./fonts.css");
+
+ p {
+    width: 400px;
+    border: 1px solid #000; 
+    }
+    
+.white1 {
+    white-space: normal;
+}
+
+.white2 {
+    white-space: normal;
+}
+
+.white3 {
+    white-space: pre;
+}
+
+.white4 {
+    white-space: pre-wrap;
+    }
+
+.white5 {
+    white-space: pre-wrap;
+}
